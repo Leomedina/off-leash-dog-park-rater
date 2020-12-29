@@ -1,0 +1,22 @@
+{
+  "name": "off-leash-dog-park-rater",
+  "version": "1.0.0",
+  "description": "Off Leash is a dog park rating app.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leomedina/off-leash-dog-park-rater.git"
+  },
+  "author": "Leo Medina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leomedina/off-leash-dog-park-rater/issues"
+  },
+  "homepage": "https://github.com/Leomedina/off-leash-dog-park-rater#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
