@@ -1,4 +1,5 @@
 /** Off Leash - Dog Park Discovery and Rater */
+
 const express = require("express");
 const app = express();
 const path = require('path');
@@ -7,7 +8,7 @@ const path = require('path');
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(express.static('public'));
 
 /** Application Routes */
 app.use((req, res) => {
@@ -17,4 +18,6 @@ app.use((req, res) => {
 
 /** 404 Handler and Error Handlers */
 
+
+/** Exports */
 module.exports = app;
