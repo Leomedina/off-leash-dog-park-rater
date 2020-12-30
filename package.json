@@ -2,7 +2,7 @@
   "name": "off-leash-dog-park-rater",
   "version": "1.0.0",
   "description": "Off Leash is a dog park rating app.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/Leomedina/off-leash-dog-park-rater#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.9"
   }
 }

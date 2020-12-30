@@ -2,7 +2,7 @@
  * File to run the Express server
  */
 
-const app = require("./app");
+const app = require("./index");
 const { PORT } = require('./config');
 
 app.listen(PORT, function startServer() {
