@@ -14,9 +14,7 @@ app.use((req, res) => {
   res.render('home');
 });
 
-
-/** 404 Handler and Error Handlers */
-
+/** Error Handlers */
 
 /** Exports */
 module.exports = app;

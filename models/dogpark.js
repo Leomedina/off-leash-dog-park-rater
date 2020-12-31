@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const DogParkSchema = new Schema({
+const dogParkSchema = new Schema({
   title: {
     type: String,
     maxlength: [30, 'Please use 30 Characters or less.'],
@@ -23,5 +23,7 @@ const DogParkSchema = new Schema({
   bigAllowed: Boolean
 });
 
+const DogPark = mongoose.model('Dogpark', DogParkSchema);
+
 /** Exports */
-module.exports = mongoose.model('Dogpark', DogParkSchema);
+module.exports = DogPark;
