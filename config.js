@@ -1,8 +1,6 @@
-/**
- * Shared config file for the application
- */
-
+/** Shared configurations for the app */
 const PORT = 3000;
+const databaseUri = process.env.MONGODB_URI || 'mongodb://localhost/off_leash';
 
-
-module.exports = { PORT };
+/** Exports */
+module.exports = { PORT, databaseUri };
