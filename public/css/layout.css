@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  height: 100vh;
+  grid-template-columns: repeat(auto-fit, 480px);
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-areas:
+    "hero hero hero"
+    "footer footer footer ";
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-weight: 800;
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.93);
+}
+
+.hero {
+  grid-area: hero;
+  width: 100%;
+}
+
+.hero-image {
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-top: 1px solid black;
+  padding: 1rem 2rem;
+}

@@ -42,11 +42,17 @@ const DogParks = [
     city: 'Brooklyn',
     ratings: 5,
   }
-]
+];
 
-DogPark.insertMany(DogParks)
-  .then(res => {
-    console.log(res)
-  }).catch(err => {
-    console.log(err);
-  });
+async function seedDB() {
+  await DogPark.deleteMany({});
+
+  const response = await DogPark.insertMany(DogParks)
+    .then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err);
+    });
+};
+
+seedDB();

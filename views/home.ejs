@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>here is a test</h1>
-  </body>
-</html>
+<% layout('./layouts/boilerplate'); %> <%- include('./components/navbar'); %>
+
+<div class="hero">
+  <img class="hero-image" src="/img/temp.jpg" alt="woman in dog park">
+  <h1>Explore Dog Parks</h1>
+</div class="hero">
+
+<%- include('./components/footer') %> 
