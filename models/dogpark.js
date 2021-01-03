@@ -5,10 +5,14 @@ const Schema = mongoose.Schema;
 const dogParkSchema = new Schema({
   title: {
     type: String,
-    maxlength: [30, 'Please use 30 Characters or less.'],
+    maxlength: [50, 'Please use 50 Characters or less.'],
     required: true
   },
-  location: {
+  address: {
+    type: String,
+    required: true
+  },
+  city: {
     type: String,
     required: true
   },
@@ -19,11 +23,17 @@ const dogParkSchema = new Schema({
     min: [0, 'Rating less than 0 is not valid,'],
     max: [5, 'Rating more than 5 is not valid.']
   },
-  smallAllowed: Boolean,
-  bigAllowed: Boolean
+  hoursOpen: {
+    type: [Schema.Types.Mixed], // Schema will need to follow [ HOUR:Number, MINUTES:Number, AM/PM:String ]
+    default: ['none']
+  },
+  hoursClose: {
+    type: [Schema.Types.Mixed], // Schema will need to follow [ HOUR:Number, MINUTES:Number, AM/PM:String ]
+    default: ['none']
+  }
 });
 
-const DogPark = mongoose.model('Dogpark', DogParkSchema);
+const DogPark = mongoose.model('Dogpark', dogParkSchema);
 
 /** Exports */
 module.exports = DogPark;
