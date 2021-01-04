@@ -20,7 +20,7 @@ const dogParkSchema = new Schema({
     type: Number,
     required: true,
     default: 0,
-    min: [0, 'Rating less than 0 is not valid,'],
+    min: [0, 'Rating less than 0 is not valid.'],
     max: [5, 'Rating more than 5 is not valid.']
   },
   hoursOpen: {
@@ -30,6 +30,15 @@ const dogParkSchema = new Schema({
   hoursClose: {
     type: [Schema.Types.Mixed], // Schema will need to follow [ HOUR:Number, MINUTES:Number, AM/PM:String ]
     default: ['none']
+  },
+  dateCreated: {
+    type: Date,
+    default: Date.now
+  },
+  votes: {
+    type: Number,
+    default: 0,
+    min: [0, "You Have Less Than 0 Votes."]
   }
 });
 

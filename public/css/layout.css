@@ -1,5 +1,8 @@
-html {
+* {
   box-sizing: border-box;
+}
+
+html {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
 }
@@ -10,7 +13,7 @@ body {
   grid-template-rows: 1fr 3fr 1fr;
   grid-template-areas:
     "hero hero hero"
-    "locations locations locations"
+    "latest latest latest"
     "footer footer footer ";
 }
 
@@ -20,12 +23,35 @@ nav {
   left: 0;
   display: flex;
   flex-flow: row;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  padding: 1rem 2rem;
-  font-weight: 800;
-  background-color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 2rem;
+  height: 2.5rem;
 }
+
+.logo {
+  position: relative;
+  background-image: url(/img/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+}
+
+.sub-nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  font-size: .7rem;
+}
+
+.sub-nav h1 {
+  padding-left: 2rem;
+}
+
 
 .hero {
   background-image: url("/img/temp.jpg");
@@ -44,17 +70,28 @@ nav {
   color: white;
   padding: 2rem 5rem 4rem 2rem;
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.latest {
+  grid-area: latest;
+  padding: 3rem 3rem;
+  height: 500px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+
+.latest h1 {
+  padding-bottom: 3rem;
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 
 .locations {
-  grid-area: locations;
-  padding: 3rem 2rem;
   display: flex;
-  flex-flow: row;
-  height: 500px;
-  justify-content: space-evenly;
-  font-weight: 800;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 footer {
@@ -64,6 +101,6 @@ footer {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  font-size: 0.8rem;
-  padding: 1rem 2rem;
+  font-size: 0.6rem;
+  padding: 0.8rem 3rem;
 }

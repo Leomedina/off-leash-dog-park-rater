@@ -2,7 +2,8 @@
 var express = require('express'),
   app = express(),
   path = require('path'),
-  ejsMate = require('ejs-mate');
+  ejsMate = require('ejs-mate'),
+  homeRoutes = require('./routes/home');
 
 /** Express Configuration */
 app.use(express.static(path.join(__dirname, 'public')));
@@ -12,9 +13,7 @@ app.set('view engine', 'ejs');
 app.engine('ejs', ejsMate);
 
 /** Application Routes */
-app.use((req, res) => {
-  res.render('home');
-});
+app.use('/', homeRoutes);
 
 /** Error Handlers */
 

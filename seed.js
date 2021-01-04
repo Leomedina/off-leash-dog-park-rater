@@ -16,7 +16,7 @@ const DogParks = [
     city: 'New York',
     ratings: 3,
     hoursOpen: ['06', '00', 'AM'],
-    hoursClose: ['12', '00', 'AM']
+    hoursClose: ['12', '00', 'AM'],
   },
   {
     title: "Sirius Dog Run: Battery Park",
