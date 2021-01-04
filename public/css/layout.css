@@ -26,9 +26,8 @@ nav {
   justify-content: space-between;
   width: 100%;
   font-weight: 400;
-  background-color: black;
   color: white;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 5rem;
   height: 2.5rem;
 }
 
@@ -41,41 +40,65 @@ nav {
 }
 
 .sub-nav {
+  text-transform: uppercase;
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .sub-nav h1 {
   padding-left: 2rem;
 }
 
-
 .hero {
   background-image: url("/img/temp.jpg");
   background-size: cover;
   background-position: bottom;
   width: 100%;
-  height: 750px;
+  height: 700px;
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
   align-items: flex-end;
   grid-area: hero;
+  padding: 2rem 5rem;
 }
 
-.hero-inside {
+.hero form {
   color: white;
-  padding: 2rem 5rem 4rem 2rem;
   font-size: 4rem;
   font-weight: 700;
 }
 
+.inner-form {
+  background: #fff;
+  margin-top: 1rem;
+  border-radius: 34px;
+  padding: 0.5rem;
+}
+
+.input-field {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+form input {
+  color: #666;
+  border: 0;
+  flex-grow: 1;
+}
+
+form button {
+  background: none;
+  border: none;
+}
+
 .latest {
   grid-area: latest;
-  padding: 3rem 3rem;
+  padding: 3rem 5rem;
   height: 500px;
   font-weight: 700;
   display: flex;
@@ -85,7 +108,7 @@ nav {
 .latest h1 {
   padding-bottom: 3rem;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .locations {
@@ -102,5 +125,5 @@ footer {
   flex-flow: row nowrap;
   justify-content: space-between;
   font-size: 0.6rem;
-  padding: 0.8rem 3rem;
+  padding: 0.8rem 5rem;
 }
