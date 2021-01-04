@@ -25,10 +25,19 @@ nav {
   flex-flow: row;
   justify-content: space-between;
   width: 100%;
-  font-weight: 400;
+  font-weight: 700;
   color: white;
   padding: 0.5rem 5rem;
   height: 2.5rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.logo-section {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .logo {
@@ -36,16 +45,15 @@ nav {
   background-image: url(/img/logo.png);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100px;
+  width: 35px;
+  height: 25px;
 }
 
 .sub-nav {
-  text-transform: uppercase;
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  font-size: 0.7rem;
 }
 
 .sub-nav h1 {
@@ -77,6 +85,7 @@ nav {
   margin-top: 1rem;
   border-radius: 34px;
   padding: 0.5rem;
+  filter: drop-shadow(0 0 0.5rem black);
 }
 
 .input-field {
