@@ -17,8 +17,9 @@ app.engine('ejs', ejsMate);
 /** Application Routes */
 app.use('/', homeRoutes);
 
-/** 404 Handler */
+/** 404 Error Handler */
 app.use(function (req, res) {
+  
   res.redirect('/');
 });
 
