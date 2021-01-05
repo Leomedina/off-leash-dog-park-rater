@@ -4,7 +4,8 @@ var express = require('express'),
   path = require('path'),
   ejsMate = require('ejs-mate'),
   morgan = require('morgan'),
-  homeRoutes = require('./routes/home');
+  homeRoutes = require('./routes/home'),
+  dogParkRoutes = require('./routes/dogparks');
 
 /** Express Configuration */
 app.use(express.static(path.join(__dirname, 'public')));
@@ -16,10 +17,11 @@ app.engine('ejs', ejsMate);
 
 /** Application Routes */
 app.use('/', homeRoutes);
+app.use('/dogparks', dogParkRoutes);
 
 /** 404 Error Handler */
 app.use(function (req, res) {
-  
+
   res.redirect('/');
 });
 

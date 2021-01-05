@@ -80,6 +80,11 @@ nav {
   font-weight: 700;
 }
 
+.dogparks {
+  background: black;
+  height: 100px;
+}
+
 .inner-form {
   background: #fff;
   margin-top: 1rem;
