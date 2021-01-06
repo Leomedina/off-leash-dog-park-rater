@@ -8,15 +8,16 @@ html {
 }
 
 body {
-  height: 100vh;
-  grid-template-columns: repeat(auto-fit, 480px);
-  grid-template-rows: 1fr 3fr 1fr;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: 3.5fr 2fr .1fr;
   grid-template-areas:
     "hero hero hero"
     "latest latest latest"
     "footer footer footer ";
 }
 
+/* NAVIGATION SECTION */
 nav {
   position: fixed;
   top: 0;
@@ -60,18 +61,19 @@ nav {
   padding-left: 2rem;
 }
 
+/* HERO SECTION */
+
 .hero {
   background-image: url("/img/hero.jpg");
   background-size: cover;
   background-position: bottom;
   width: 100%;
-  height: 700px;
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
   align-items: flex-end;
   grid-area: hero;
-  padding: 2rem 5rem;
+  padding: 2rem;
 }
 
 .hero form {
@@ -107,9 +109,7 @@ form button {
 
 .latest {
   grid-area: latest;
-  margin: 2rem auto;
-  padding: 0 2rem;
-  height: 500px;
+  margin: 2rem 2rem;
   font-weight: 700;
   display: flex;
   flex-direction: column;
@@ -172,11 +172,9 @@ form button {
 /* Footer */
 
 footer {
-  position: sticky;
-  display: block;
+  grid-area: footer;
   background-color: black;
   color: white;
-  grid-area: footer;
   font-size: 0.6rem;
   padding: 0.8rem 2rem;
 }
