@@ -10,7 +10,7 @@ html {
 body {
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
-  grid-template-rows: 3.5fr 2fr .1fr;
+  grid-template-rows: 3.3fr 2fr .1fr;
   grid-template-areas:
     "hero hero hero"
     "latest latest latest"
