@@ -15,6 +15,7 @@ const DogParks = [
     address: 'E 9th St between Aves A and B',
     city: 'New York',
     ratings: 3,
+    imageLink: "https://i.imgur.com/aOoaGfU.jpg",
     hoursOpen: ['06', '00', 'AM'],
     hoursClose: ['12', '00', 'AM'],
   },
@@ -23,24 +24,28 @@ const DogParks = [
     address: '385 S End Ave',
     city: 'New York',
     ratings: 4,
+    imageLink: "https://i.imgur.com/VTw6DOL.jpg",
   },
   {
     title: "Madison Square Park Dog Run",
     address: 'Madison Square Park',
     city: 'New York',
     ratings: 4,
+    imageLink: "`",
   },
   {
     title: "Tribeca Dog Run at Pier 26",
     address: 'West St at N Moore St',
     city: 'New York',
     ratings: 2,
+    imageLink: "",
   },
   {
     title: "Hillside Dog Park",
     address: 'Vine St',
     city: 'Brooklyn',
     ratings: 5,
+    imageLink: "https://i.imgur.com/h2jMydz.jpg",
   }
 ];
 

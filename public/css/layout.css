@@ -27,7 +27,7 @@ nav {
   width: 100%;
   font-weight: 700;
   color: white;
-  padding: 0.5rem 5rem;
+  padding: 0.5rem 2rem;
   height: 2.5rem;
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -80,11 +80,6 @@ nav {
   font-weight: 700;
 }
 
-.dogparks {
-  background: black;
-  height: 100px;
-}
-
 .inner-form {
   background: #fff;
   margin-top: 1rem;
@@ -112,32 +107,76 @@ form button {
 
 .latest {
   grid-area: latest;
-  padding: 3rem 5rem;
+  margin: 2rem auto;
+  padding: 0 2rem;
   height: 500px;
   font-weight: 700;
   display: flex;
   flex-direction: column;
+  justify-content: stretch;
 }
 
 .latest h1 {
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   font-weight: 700;
   font-size: 1.5rem;
 }
 
 .locations {
+  grid-area: latest;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-content: center;
 }
 
+/* Card */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 250px;
+  border-radius: 15px;
+  background-color: white;
+  filter: drop-shadow(0 0 0.2rem black);
+  margin-top: 2rem;
+}
+
+.card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: block;
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+}
+
+.card-content {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top: solid 1px #666;
+  padding: 0.8rem 1rem;
+  display: block;
+  background-color: white;
+  height: 100%;
+}
+
+.card-content .title {
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+/* Footer */
+
 footer {
+  position: sticky;
+  display: block;
   background-color: black;
   color: white;
   grid-area: footer;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
   font-size: 0.6rem;
-  padding: 0.8rem 5rem;
+  padding: 0.8rem 2rem;
 }

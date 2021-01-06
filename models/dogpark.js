@@ -39,6 +39,10 @@ const dogParkSchema = new Schema({
     type: Number,
     default: 0,
     min: [0, "You Have Less Than 0 Votes."]
+  },
+  imageLink: {
+    type:  String,
+    default: ""
   }
 });
 

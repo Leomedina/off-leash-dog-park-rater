@@ -1,13 +1,17 @@
 <% layout('layouts/boilerplate'); %> <%- include('partials/navbar'); %>
 
-<section class="hero">
-<%- include('./partials/search'); %>
-</section>
+<section class="hero"><%- include('./partials/search'); %></section>
 <section class="latest">
   <h1>Recently Added:</h1>
   <div class="locations">
     <% for(let park of latestParks) { %>
-    <h3><%= park.title %></h3>
+    <div class="card">
+      <img src=<%-park.imageLink %>>
+      <div class="card-content">
+        <h3 class="title"><%- park.title %></h3>
+        <p></p>
+      </div>
+    </div>
     <% } %>
   </div>
 </section>
