@@ -24,8 +24,9 @@ app.all("*", function (req, res) {
   res.redirect('/');
 });
 
-app.use(function (req, res, next) {
-  res.send("Something when wrong");
+app.use(function (err, req, res, next) {
+  const { status = 500, message = "Something when wrong" } = err;
+  res.status(status).send(message);
 });
 
 /** Exports */
