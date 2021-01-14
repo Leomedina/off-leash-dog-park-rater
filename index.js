@@ -8,10 +8,10 @@ var express = require('express'),
   dogParkRoutes = require('./routes/dogparks');
 
 /** Express Configuration */
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public/static')));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'))
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'public/views'));
 app.set('view engine', 'ejs');
 app.engine('ejs', ejsMate);
 
