@@ -19,10 +19,13 @@ app.engine('ejs', ejsMate);
 app.use('/', homeRoutes);
 app.use('/dogparks', dogParkRoutes);
 
-/** 404 Error Handler */
-app.use(function (req, res) {
-
+/** 404 and Error Handlers */
+app.all("*", function (req, res) {
   res.redirect('/');
+});
+
+app.use(function (req, res, next) {
+  res.send("Something when wrong");
 });
 
 /** Exports */
