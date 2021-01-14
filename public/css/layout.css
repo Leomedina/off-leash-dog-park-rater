@@ -140,7 +140,7 @@ form button {
   border-radius: 15px;
   background-color: white;
   filter: drop-shadow(0 0 0.2rem black);
-  margin-top: 2rem;
+  margin: 2rem 1rem;
 }
 
 .card img {

@@ -5,7 +5,13 @@
   <h1>All Parks:</h1>
   <div class="locations">
     <% for(let park of latestParks) { %>
-    <h3><%= park.title %></h3>
+    <div class="card">
+      <img src=<%-park.imageLink %>>
+      <div class="card-content">
+        <h3 class="title"><%- park.title %></h3>
+        <p><%- park.rating %></p>
+      </div>
+    </div>
     <% } %>
   </div>
 </section>
