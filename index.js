@@ -20,9 +20,9 @@ app.use('/', homeRoutes);
 app.use('/dogparks', dogParkRoutes);
 
 /** 404 and Error Handlers */
-app.all("*", function (req, res) {
-  res.redirect('/');
-});
+// app.all("*", function (req, res) {
+  // res.redirect('/');
+// });
 
 app.use(function (err, req, res, next) {
   const { status = 500, message = "Something when wrong" } = err;
