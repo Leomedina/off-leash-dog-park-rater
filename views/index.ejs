@@ -1,12 +1,13 @@
 <% layout('layouts/layout'); %> <%- include('partials/navbar'); %>
 
-<section class="hero"><%- include('./partials/search'); %></section>
-<section class="latest">
-  <h1 class="font-bold text-center">Recently Added:</h1>
-  <div class="locations">
+<section class="" style="background-image: url(public/static/img/hero.jpg);">
+  <%- include('./partials/search'); %></section>
+<section class="px-4 pb-2">
+  <h1 class="text-2xl font-bold py-5">Recently Added:</h1>
+  <div class="flex justify-between">
     <% for(let park of latestParks) { %>
-    <div class="card">
-      <img src=<%-park.imageLink %>>
+    <div class="w-full m-2 shadow-xl rounded-xl">
+      <img src=<%-park.imageLink %> class="w-full h-60 bg-center rounded-xl">
       <div class="card-content">
         <h3 class="title"><%- park.title %></h3>
         <p><%- park.rating %></p>

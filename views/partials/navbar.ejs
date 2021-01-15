@@ -1,11 +1,40 @@
-<nav>
-  <div class="logo-section">
-    <span class="logo"></span>
-    <h1>Off-Leash</h1>
+<nav class="bg-gray-900 sm:flex sm:justify-between px-4 py-1 text-white items-center font-bold">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center">
+      <img class="h-7" src="/static/img/logo.png" alt="Off-Leash" />
+      <a class="px-4" href="/">OFF-LEASH</a>
+    </div>
+    <button
+      id="hamburger"
+      class="sm:hidden text-gray-500 hover:text-white focus:text-white focus:outline-none"
+      type="button"
+    >
+      <svg
+        class="h-6 w-6"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
   </div>
-  <div class="sub-nav">
-    <h1>Explore</h1>
-    <h1>Login</h1>
-    <h1>Register</h1>
+  <div class="px-2 py-2 flex-grow-0 hidden sm:flex" id="hamMenu">
+    <a class="block hover:bg-gray-600 rounded px-2 py-1 mt-1" href="/dogparks"
+      >Explore</a
+    >
+    <a class="block hover:bg-gray-600 rounded px-2 py-1 mt-1" href="/login"
+      >Login</a
+    >
+    <a class="block hover:bg-gray-600 rounded px-2 py-1 mt-1" href="/register"
+      >Register</a
+    >
   </div>
 </nav>
