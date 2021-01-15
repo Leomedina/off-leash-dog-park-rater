@@ -4,15 +4,17 @@
   <%- include('./partials/search'); %></section>
 <section class="px-4 pb-2">
   <h1 class="text-2xl font-bold py-5">Recently Added:</h1>
-  <div class="flex justify-between">
+  <div class="grid sm:grid-cols-2  lg:grid-cols-4 gap-10">
     <% for(let park of latestParks) { %>
-    <div class="w-full m-2 shadow-xl rounded-xl">
-      <img src=<%-park.imageLink %> class="w-full h-60 bg-center rounded-xl">
-      <div class="card-content">
-        <h3 class="title"><%- park.title %></h3>
-        <p><%- park.rating %></p>
+      <a href="/parks/<%park.id %>"> 
+        <div class="shadow rounded-xl hover:shadow-xl">
+        <img src=<%-park.imageLink %> class="w-full h-52 rounded-t-2xl">
+        <div class="card-content">
+          <h3 class="title"><%- park.title %></h3>
+          <p><%- park.rating %></p>
+        </div>
       </div>
-    </div>
-    <% } %>
+    </a>
+      <% } %>
   </div>
 </section>
