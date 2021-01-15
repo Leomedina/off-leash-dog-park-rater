@@ -8,10 +8,10 @@ var express = require('express'),
   dogParkRoutes = require('./routes/dogparks');
 
 /** Express Configuration */
-app.use(express.static(path.join(__dirname, 'public/static')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'))
-app.set('views', path.join(__dirname, 'public/views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.engine('ejs', ejsMate);
 
@@ -20,9 +20,9 @@ app.use('/', homeRoutes);
 app.use('/dogparks', dogParkRoutes);
 
 /** 404 and Error Handlers */
-app.all("*", function (req, res) {
-  res.redirect('/');
-});
+// app.all("*", function (req, res) {
+  // res.redirect('/');
+// });
 
 app.use(function (err, req, res, next) {
   const { status = 500, message = "Something when wrong" } = err;

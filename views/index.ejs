@@ -1,8 +1,8 @@
-<% layout('layouts/boilerplate'); %> <%- include('partials/navbar'); %>
+<% layout('layouts/layout'); %> <%- include('partials/navbar'); %>
 
 <section class="hero"><%- include('./partials/search'); %></section>
 <section class="latest">
-  <h1>Recently Added:</h1>
+  <h1 class="font-bold text-center">Recently Added:</h1>
   <div class="locations">
     <% for(let park of latestParks) { %>
     <div class="card">
