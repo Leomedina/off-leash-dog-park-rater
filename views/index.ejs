@@ -2,17 +2,20 @@
 
 <section class="" style="background-image: url(public/static/img/hero.jpg);">
   <%- include('./partials/search'); %></section>
-<section class="px-4 pb-2">
+<section class="pb-2 sm:px-10 px-4">
   <h1 class="text-2xl font-bold py-5">Recently Added:</h1>
-  <div class="flex justify-between">
+  <div class="grid sm:grid-cols-2  lg:grid-cols-4 gap-10">
     <% for(let park of latestParks) { %>
-    <div class="w-full m-2 shadow-xl rounded-xl">
-      <img src=<%-park.imageLink %> class="w-full h-60 bg-center rounded-xl">
-      <div class="card-content">
-        <h3 class="title"><%- park.title %></h3>
-        <p><%- park.rating %></p>
+      <a href="/dogparks/<%- park.id %>"> 
+        <div class="shadow rounded-xl hover:shadow-xl border-gray-900 border-1">
+        <img src=<%-park.imageLink %> class="w-full h-52 rounded-t-xl">
+        <div class="px-4 py-3 font-semibold text-gray-900">
+          <h3 class="text-lg font-extrabold mb-3"><%- park.title %></h3>
+          <p class="pt-2 border-gray-900 border-t-2"><%- park.address %> </p>
+          <p>Rating: <%- park.rating %> </p>
+        </div>
       </div>
-    </div>
-    <% } %>
+    </a>
+      <% } %>
   </div>
 </section>
