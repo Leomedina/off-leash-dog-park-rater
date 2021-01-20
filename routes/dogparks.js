@@ -7,9 +7,16 @@ var express = require('express'),
 
 /** GET - Renders Home Page */
 router.get('/', wrapAsync(async function (req, res, next) {
-  const latestParks = await DogPark.find().sort({ dateCreated: -1 }).limit(25);
-  if (!latestParks) throw new ExpressError("Error Retrieving Latest Parks", 500);
-  res.status(200).render('pages/dogparks', { latestParks });
+  const allParks = await DogPark.find().sort({ dateCreated: -1 }).limit(25);
+  if (!allParks) throw new ExpressError("Error Retrieving Latest Parks", 500);
+  res.status(200).render('pages/dogparks', { allParks });
+}));
+
+router.get('/:id', wrapAsync(async function (req, res, next) {
+  const { id } = req.params;
+  const dogPark =  await DogPark.findById(id);
+  if(!dogPark) throw new ExpressError('DogPark not found', 404);
+  res.status(200).send(park);
 }));
 
 /** Exports */
