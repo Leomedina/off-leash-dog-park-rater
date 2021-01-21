@@ -1,12 +1,15 @@
 <% layout('layouts/layout'); %> <%- include('../partials/navbar'); %>
 
-<section>
+<section class="pb-2 sm:px-10 px-4">
   <h1>All Parks:</h1>
-  <div class="grid sm:grid-cols-2  lg:grid-cols-4 gap-10">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
     <% for(let park of allParks) { %>
     <a href="/dogparks/<%- park.id %>">
       <div class="shadow rounded-xl hover:shadow-xl border-gray-900 border-1">
-        <img src="<%-park.imageLink%>" class="w-full h-52 rounded-t-xl" />
+        <img
+          src="<%-park.imageLink%>"
+          class="w-full h-52 rounded-t-xl object-cover"
+        />
         <div class="px-4 py-3 font-semibold text-gray-900">
           <h3 class="text-lg font-extrabold mb-3"><%- park.title %></h3>
           <p class="pt-2 border-gray-900 border-t-2"><%- park.address %></p>
