@@ -16,7 +16,7 @@ router.get('/:id', wrapAsync(async function (req, res, next) {
   const { id } = req.params;
   const dogPark =  await DogPark.findById(id);
   if(!dogPark) throw new ExpressError('DogPark not found', 404);
-  res.status(200).send(park);
+  res.status(200).send(dogPark);
 }));
 
 /** Exports */
