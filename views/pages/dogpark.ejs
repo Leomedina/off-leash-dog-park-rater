@@ -1,1 +1,11 @@
 <% layout('layouts/layout'); %> <%- include('../partials/navbar'); %>
+
+<section >
+  <img
+    src="<%-dogPark.imageLink%>"
+    class="w-full sm:h-96 max-h-64 object-cover"
+  />
+  <div class="sm:mx-24 mx-10 mt-5 sm:mt-10">
+    <h1 class="font-bold sm:text-4xl text-3xl"><%- dogPark.title %></h1>
+  </div>
+</section>
