@@ -19,5 +19,11 @@ router.get('/:id', wrapAsync(async function (req, res, next) {
   res.status(200).render('pages/dogpark', { dogPark });
 }));
 
+router.post('/', wrapAsync(async function (req, res, next) {
+  const { title, address, city, imageLink } = req.params;
+  const dogPark = await DogPark.add({ title, address, city, image });
+  res.status(201).redirect('/dogparks');
+}));
+
 /** Exports */
 module.exports = router;
